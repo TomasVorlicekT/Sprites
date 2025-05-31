@@ -14,6 +14,17 @@ void Font::Draw(Graphics& gfx, const std::string& text, const Vei2 pos, const Co
 
 	for (const char& c : text)
 	{
+		// on a newline character, reset x position and move down by 1 glyph height
+		if (c == '\n')
+		{
+			// carriage return
+			posChar.x = pos.x;
+			// line feed
+			posChar.y += glyphHeight;
+			// we don't want to advance the character position right for a newline
+			continue;
+		}
+
 		if (c >= beginChar + 1 && c <= endChar)
 		{
 			convertCharToSpriteSection(gfx, c, posChar, textColor);

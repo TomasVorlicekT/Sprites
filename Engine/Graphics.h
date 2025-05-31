@@ -54,6 +54,7 @@ public:
 	Graphics& operator=( const Graphics& ) = delete;
 	void EndFrame();
 	void BeginFrame();
+	Color GetPixel(int x, int y) const;
 	void PutPixel( int x,int y,int r,int g,int b )
 	{
 		PutPixel( x,y,{ unsigned char( r ),unsigned char( g ),unsigned char( b ) } );
@@ -68,6 +69,9 @@ public:
 	void DrawSpriteColor(int x, int y, const Surface& s, Color spriteColor, Color chroma = Colors::Magenta);
 	void DrawSpriteColor(int x, int y, const RectI& srcRect, const Surface& s, Color spriteColor, Color chroma = Colors::Magenta);
 	void DrawSpriteColor(int x, int y, RectI srcRect, const RectI& clip, const Surface& s, Color spriteColor, Color chroma = Colors::Magenta);
+	void DrawSpriteGhost(int x, int y, const Surface& s, Color chroma = Colors::Magenta);
+	void DrawSpriteGhost(int x, int y, const RectI& srcRect, const Surface& s, Color chroma = Colors::Magenta);
+	void DrawSpriteGhost(int x, int y, RectI srcRect, const RectI& clip, const Surface& s, Color chroma = Colors::Magenta);
 	~Graphics();
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain>				pSwapChain;
