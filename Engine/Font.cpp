@@ -30,5 +30,5 @@ void Font::convertCharToSpriteSection(Graphics& gfx, const char c, const Vei2 po
 
 	RectI srcRect = RectI(Vei2(columnNum * glyphWidth, rowNum * glyphHeight), glyphWidth, glyphHeight);
 
-	gfx.DrawSprite((int)pos.x, (int)pos.y, srcRect, fontSprite, chroma);
+	gfx.DrawSpriteColor((int)pos.x, (int)pos.y, srcRect, fontSprite, textColor, chroma);
 }

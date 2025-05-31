@@ -62,5 +62,5 @@ void Game::UpdateModel()
 void Game::ComposeFrame()
 {
 	link.Draw( gfx );
-	font.Draw(gfx, "Wadafak?", wnd.mouse.GetPos(), Colors::White);
+	font.Draw(gfx, "Wadafak?", wnd.mouse.GetPos(), Colors::Red);
 }
