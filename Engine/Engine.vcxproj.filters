@@ -16,6 +16,9 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{8b6c92a8-f65d-451e-80e3-d65773602b92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fonts">
+      <UniqueIdentifier>{ab4984c4-f656-415e-84fe-499640dd265f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChiliWin.h">
@@ -78,6 +81,9 @@
     <ClInclude Include="Vec2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DXErr.cpp">
@@ -128,6 +134,9 @@
     <ClCompile Include="Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="FramebufferPS.hlsl">
@@ -145,6 +154,12 @@
   <ItemGroup>
     <Image Include="Chili.ico">
       <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\I13-Font-Sheets\I13-Font-Sheets\Consolas13x24.bmp">
+      <Filter>Fonts</Filter>
+    </Image>
+    <Image Include="..\I13-Font-Sheets\I13-Font-Sheets\Fixedsys16x28.bmp">
+      <Filter>Fonts</Filter>
     </Image>
   </ItemGroup>
 </Project>
